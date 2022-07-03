@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liste des vinyles</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        .image {
+            display: flex;
+            flex-wrap: wrap;
+            border-color: red;
+        }
+        
+        .view {
+            border-color: rgb(43, 0, 255);
+        }
+        
+        div {
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="view f-center">
+        <img src="" id="view">
+    </div>
+    <div class="image">
+        <img src="img/IMG_1034.gif">
+        <img src="img/IMG_1035.gif">
+        <img src="img/IMG_1036.gif">
+        <img src="img/IMG_1037.gif">
+        <img src="img/IMG_1038.gif">
+        <img src="img/IMG_1039.gif">
+        <img src="img/IMG_1040.gif">
+        <img src="img/IMG_1041.gif">
+        <img src="img/IMG_1042.gif">
+        <img src="img/IMG_1043.gif">
+        <img src="img/IMG_1045.gif">
+        <img src="img/IMG_1046.gif">
+        <img src="img/IMG_1047.gif">
+        <img src="img/IMG_1048.gif">
+        <img src="img/IMG_1049.gif">
+        <img src="img/IMG_1050.gif">
+        <img src="img/IMG_1051.gif">
+        <img src="img/IMG_1052.gif">
+        <img src="img/IMG_1053.gif">
+        <img src="img/IMG_1054.gif">
+        <img src="img/IMG_1055.gif">
+        <img src="img/IMG_1056.gif">
+        <img src="img/IMG_1057.gif">
+        <img src="img/IMG_1058.gif">
+        <img src="img/IMG_1059.gif">
+        <img src="img/IMG_1060.gif">
+        <img src="img/IMG_1061.gif">
+        <img src="img/IMG_1062.gif">
+        <img src="img/IMG_1063.gif">
+        <img src="img/IMG_1064.gif">
+        <img src="img/IMG_1066.gif">
+        <img src="img/IMG_1067.gif">
+        <img src="img/IMG_1068.gif">
+        <img src="img/IMG_1069.gif">
+        <img src="img/IMG_1070.gif">
+        <img src="img/IMG_1071.gif">
+        <img src="img/IMG_1072.gif">
+        <img src="img/IMG_1073.gif">
+        <img src="img/IMG_1074.gif">
+        <img src="img/IMG_1075.gif">
+        <img src="img/IMG_1076.gif">
+        <img src="img/IMG_1077.gif">
+        <img src="img/IMG_1078.gif">
+        <img src="img/IMG_1079.gif">
+        <img src="img/IMG_1080.gif">
+        <img src="img/IMG_1081.gif">
+        <img src="img/IMG_1082.gif">
+        <img src="img/IMG_1083.gif">
+        <img src="img/IMG_1084.gif">
+        <img src="img/IMG_1085.gif">
+        <img src="img/IMG_1086.gif">
+        <img src="img/IMG_1087.gif">
+        <img src="img/IMG_1088.gif">
+        <img src="img/IMG_1089.gif">
+        <img src="img/IMG_1090.gif">
+        <img src="img/IMG_1091.gif">
+        <img src="img/IMG_1092.gif">
+        <img src="img/IMG_1093.gif">
+        <img src="img/IMG_1094.gif">
+        <img src="img/IMG_1095.gif">
+        <img src="img/IMG_1096.gif">
+        <img src="img/IMG_1097.gif">
+        <img src="img/IMG_1098.gif">
+        <img src="img/IMG_1099.gif">
+        <img src="img/IMG_1100.gif">
+        <img src="img/IMG_1101.gif">
+        <img src="img/IMG_1102.gif">
+        <img src="img/IMG_1103.gif">
+        <img src="img/IMG_1104.gif">
+        <img src="img/IMG_1105.gif">
+        <img src="img/IMG_1106.gif">
+        <img src="img/IMG_1107.gif">
+        <img src="img/IMG_1108.gif">
+        <img src="img/IMG_1109.gif">
+        <img src="img/IMG_1110.gif">
+        <img src="img/IMG_1111.gif">
+        <img src="img/IMG_1112.gif">
+        <img src="img/IMG_1113.gif">
+        <img src="img/IMG_1114.gif">
+        <img src="img/IMG_1115.gif">
+        <img src="img/IMG_1116.gif">
+        <img src="img/IMG_1117.gif">
+        <img src="img/IMG_1118.gif">
+        <img src="img/IMG_1119.gif">
+        <img src="img/IMG_1120.gif">
+        <img src="img/IMG_1121.gif">
+        <img src="img/IMG_1122.gif">
+        <img src="img/IMG_1123.gif">
+        <img src="img/IMG_1124.gif">
+        <img src="img/IMG_1125.gif">
+        <img src="img/IMG_1126.gif">
+        <img src="img/IMG_1127.gif">
+        <img src="img/IMG_1128.gif">
+        <img src="img/IMG_1129.gif">
+        <img src="img/demis_roussos.jpg">
+    </div>
+
+
+    <script defer="defer">
+        let imgs = document.querySelectorAll("img");
+        let zoom = 1.5;
+        imgs.forEach(el => el.addEventListener(
+            "mouseover",
+            function(event) {
+                let imgElement = event.target;
+                imgElement.width = ajust(imgElement.width * zoom);
+                imgElement.height = ajust(imgElement.height * zoom);
+
+
+            }));
+
+
+        imgs.forEach(el => el.addEventListener(
+            "mouseout",
+            function(event) {
+                let imgElement = event.target;
+                imgElement.width = ajust(imgElement.width / zoom);
+                imgElement.height = ajust(imgElement.height / zoom);
+            }));
+
+
+        function ajust(size) {
+
+            return Math.floor(size);
+        }
+    </script>
+</body>
+
+</html>
